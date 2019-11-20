@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  width: 7rem;
+}
+
+.clue {
+  border: solid 1px;
+}
+
+.tried-number {
+  border: solid 1px;
+}
