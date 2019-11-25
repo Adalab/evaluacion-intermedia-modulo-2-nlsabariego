@@ -9,10 +9,14 @@ console.log(randomNumber);
 const numberInput = document.querySelector(".js-input-number");
 const button = document.querySelector(".js-button");
 const clue = document.querySelector(".js-clue");
+const triedNumber = document.querySelector(".js-tried-number");
+
+let tried = 0;
 
 function handleFormSubmit(event) {
   event.preventDefault();
   compareNumber();
+  sumTried();
 }
 
 function compareNumber() {
@@ -26,6 +30,11 @@ function compareNumber() {
   } else if (randomNumber === numberInputValue) {
     clue.innerHTML = "Pista: Has ganado CAMPEONA!!!";
   }
+}
+
+function sumTried() {
+  tried = tried + 1;
+  triedNumber.innerHTML = `Número de intentos: ${tried}`;
 }
 
 button.addEventListener("click", handleFormSubmit);
